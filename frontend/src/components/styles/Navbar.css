@@ -1,0 +1,146 @@
+/* Phần Navbar chính */
+.custom-navbar {
+  top: 0; /* Đặt Navbar ở vị trí trên cùng */
+  width: 100%; /* Đảm bảo Navbar chiếm toàn bộ chiều rộng */
+  z-index: 1000; /* Đảm bảo Navbar luôn hiển thị trên các phần tử khác */
+  background-color: #ffffff; /* Nền trắng */
+  border-bottom: 1px solid #ddd; /* Đường viền mỏng */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Hiệu ứng đổ bóng */
+}
+
+.custom-brand {
+  font-size: 1.25rem; /* Giảm kích thước logo */
+  font-weight: bold;
+  color: #000000 !important; /* Logo màu đen */
+  text-transform: uppercase;
+  letter-spacing: 1.5px; /* Giảm khoảng cách chữ */
+}
+
+/* Liên kết của các mục trong Navbar */
+.custom-nav-links .custom-nav-link {
+  font-size: 0.9rem; /* Giảm kích thước font chữ */
+  color: #333 !important; /* Màu chữ xám đậm */
+  margin: 0 12px; /* Giảm khoảng cách giữa các liên kết */
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.custom-nav-links .custom-nav-link:hover {
+  color: #000000 !important; /* Đổi sang màu đen khi hover */
+  transform: scale(1.05); /* Phóng to nhẹ khi hover */
+}
+
+/* Nút tìm kiếm */
+.custom-button-search {
+  background-color: #000000; /* Nút màu đen */
+  color: #ffffff; /* Chữ màu trắng */
+  border: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: 15%;
+}
+
+.custom-button-search:hover {
+  background-color: #333333; /* Màu đen nhạt hơn khi hover */
+  transform: scale(1.1); /* Phóng to nhẹ khi hover */
+}
+
+.search{
+  margin-right: 70px;
+}
+
+/* Dropdown trong Navbar */
+.custom-nav-link {
+  font-size: 0.9rem; /* Giảm kích thước chữ trong dropdown */
+  color: #333 !important;
+  margin: 0 12px; /* Giảm khoảng cách giữa các liên kết */
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.custom-nav-link:hover {
+  color: #000000 !important;
+}
+
+.custom-nav-link .dropdown-toggle {
+  color: #333;
+  font-size: 0.9rem; /* Giảm kích thước chữ cho dropdown */
+  display: flex;
+  align-items: center;
+  padding: 6px 12px; /* Giảm padding cho nút dropdown */
+}
+
+.custom-nav-link .dropdown-toggle::after {
+  content: " ▼";
+  font-size: 0.7rem; /* Giảm kích thước icon */
+  margin-left: 5px;
+}
+
+.custom-nav-link .dropdown-menu {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin-top: 10px;
+  padding: 0;
+  transition: all 0.3s ease;
+  min-width: 180px; /* Giảm chiều rộng dropdown */
+}
+
+.custom-nav-link .dropdown-menu .dropdown-item {
+  padding: 8px 16px; /* Giảm padding cho item trong dropdown */
+  color: #333;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border-radius: 5px;
+}
+
+.custom-nav-link .dropdown-menu .dropdown-item:hover {
+  background-color: #f1f1f1;
+  color: #000;
+}
+
+/* Nâng cao cho item khi hover */
+.custom-nav-link .dropdown-item:active,
+.custom-nav-link .dropdown-item:hover {
+  background-color: #e6e6e6;
+  color: #000;
+}
+
+/* Dropdown toggle (nút) */
+.custom-nav-link .dropdown-toggle {
+  font-weight: 600;
+  padding: 6px 12px; /* Giảm padding */
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.custom-nav-link .dropdown-toggle:hover {
+  background-color: #f0f0f0; /* Hiệu ứng hover cho nút dropdown */
+}
+
+.custom-button {
+  font-size: 0.9rem; /* Giảm kích thước chữ cho nút */
+  padding: 6px 12px; /* Giảm padding */
+  border-radius: 20px;
+  background-color: #000000; /* Nút màu đen */
+  color: #ffffff; /* Chữ màu trắng */
+  border: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: inline-flex; /* Đảm bảo các phần tử trong nút được căn chỉnh ngang */
+  align-items: center; /* Căn giữa các phần tử theo chiều dọc */
+}
+
+.custom-button:hover {
+  background-color: #333333; /* Màu đen nhạt hơn khi hover */
+  transform: scale(1.05); /* Phóng to nhẹ khi hover */
+}
+
+.custom-icon {
+  margin: 0 10px;
+  color: #000000;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.custom-icon:hover {
+  color: #333333; /* Thay đổi màu khi hover */
+  transform: scale(1.05); /* Phóng to nhẹ khi hover */
+}
