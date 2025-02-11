@@ -1,0 +1,80 @@
+/* .modal-dialog{
+    width: 1500px;
+    /* height: 1500px; */
+    /* max-width: 1200px; */
+/* }
+
+/* Cập nhật cho modal */
+.modal-dialog-modern {
+    /* max-width: 1000px; */
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Tối giản form */
+  .form-modern {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+  }
+  
+  /* Các trường nhập dữ liệu */
+  .input-modern {
+    background-color: #f1f1f1;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    color: #333;
+    transition: all 0.3s ease;
+  }
+  
+  .input-modern:focus {
+    border-color: #007bff;
+    background-color: #fff;
+    outline: none;
+  }
+  
+  /* Các nút */
+  .button-modern {
+    border-radius: 5px;
+    font-weight: bold;
+    padding: 10px 20px;
+    transition: background-color 0.3s;
+  }
+  
+  .button-modern:hover {
+    background-color: #0056b3;
+    color: white;
+  }
+  
+  button:focus {
+    outline: none;
+  }
+  
+  /* Thêm màu cho tiêu đề */
+  .modal-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  /* Tùy chỉnh về chiều cao và độ rộng của các trường */
+  .form-control,
+  textarea.form-control {
+    min-height: 45px;
+  }
+  
+  /* Chỉnh khoảng cách giữa các phần tử */
+  .mb-4 {
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Tùy chỉnh cho văn bản mô tả hình ảnh */
+  .text-muted {
+    font-size: 12px;
+    color: #666;
+  }
+  
