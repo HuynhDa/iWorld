@@ -1,42 +1,32 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./styles/Product.css"; 
+import { Link } from "react-router-dom";
+import { Container, Carousel, Row, Col, Card} from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
+import axios from "axios";
 
-const products = [
-  {
-    id: 1,
-    name: "Product 1",
-    description: "A brief description of Product 1 and its features.",
-    price: 19.99,
-    imgUrl:
-      "https://images.unsplash.com/photo-1598618826732-fb2fdf367775?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHw1fHxzbWFydHBob25lfGVufDB8MHx8fDE3MjEzMDU4NTZ8MA&ixlib=rb-4.0.3&q=80&w=1080",
-  },
-  {
-    id: 2,
-    name: "Product 2",
-    description: "A brief description of Product 2 and its features.",
-    price: 24.99,
-    imgUrl:
-      "https://images.unsplash.com/photo-1720048171731-15b3d9d5473f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MXwxfHNlYXJjaHwxfHxzbWFydHBob25lfGVufDB8MHx8fDE3MjEzMDU4NTZ8MA&ixlib=rb-4.0.3&q=80&w=1080",
-  },
-  {
-    id: 3,
-    name: "Product 3",
-    description: "A brief description of Product 3 and its features.",
-    price: 29.99,
-    imgUrl:
-      "https://images.unsplash.com/photo-1600087626120-062700394a01?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHw2fHxzbWFydHBob25lfGVufDB8MHx8fDE3MjEzMDU4NTZ8MA&ixlib=rb-4.0.3&q=80&w=1080",
-  },
-  {
-    id: 4,
-    name: "Product 4",
-    description: "A brief description of Product 4 and its features.",
-    price: 34.99,
-    imgUrl:
-      "https://images.unsplash.com/photo-1598965402089-897ce52e8355?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHw0fHxzbWFydHBob25lfGVufDB8MHx8fDE3MjEzMDU4NTZ8MA&ixlib=rb-4.0.3&q=80&w=1080",
-  },
-];
+
 
 const Product = () => {
+
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get("http://localhost:8080/api/products/quanlysanpham")
+      .then((response) => {
+        if (Array.isArray(response.data)) {
+          setProducts(response.data);
+        } else {
+          console.error("Dữ liệu không hợp lệ", response.data);
+        }
+      })
+      .catch((error) => {
+        console.error("Có lỗi khi lấy dữ liệu:", error);
+      });
+  }, []);
+
+
   const [filter, setFilter] = useState({
     name: "",
     minPrice: 0,
@@ -107,29 +97,33 @@ const Product = () => {
       </div>
 
       {/* Product Grid */}
-      <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
-        {filteredProducts.map((product) => (
-          <div className="col" key={product.id}>
-            <div className="card h-100 shadow-sm">
-              <img
-                src={product.imgUrl}
-                className="card-img-top"
-                alt={product.name}
-              />
-              <div className="card-body">
-                <h5 className="card-title">{product.name}</h5>
-                <p className="card-text">{product.description}</p>
-                <div className="d-flex justify-content-between align-items-center">
-                  <span className="h5 mb-0">${product.price.toFixed(2)}</span>
-                  <button className="btn btn-outline-primary">
-                    <i className="bi bi-cart-plus"></i> Thêm vào giỏ
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
+      <Row>
+          {products.map((product) => (
+            <Col md={4} key={product.id}>
+              <Card className="product-card shadow-sm">
+                <Link to={`/product/${product.id}`}>
+                  <Card.Img
+                    variant="top"
+                    src={`http://localhost:8080${product.productImages[0].imageUrl}`}
+                    alt={product.name}
+                    className="card-img-top"
+                  />
+                  <Card.Body>
+                    <Card.Title className="product-name">{product.name}</Card.Title>
+                    <Card.Text className="product-price">
+                      {product.productVersions &&
+                      product.productVersions.length > 0 &&
+                      product.productVersions[0].price &&
+                      !isNaN(product.productVersions[0].price)
+                        ? product.productVersions[0].price.toLocaleString("vi-VN")
+                        : "N/A"}
+                    </Card.Text>
+                  </Card.Body>
+                </Link>
+              </Card>
+            </Col>
+          ))}
+        </Row>
     </div>
   );
 };

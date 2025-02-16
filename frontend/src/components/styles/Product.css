@@ -4,4 +4,13 @@
   }
 
 
+  .card-body-product{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+.card-body-product:hovers{
+  background-color: rgb(111, 91, 67);
+}
   
