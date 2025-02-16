@@ -212,6 +212,266 @@
     {
         "province": "Đà Nẵng",
         "district": "Quận Ngũ Hành Sơn",
+        "ward": "Phường An Hải Bắc" 
+    },
+    {
+        "province": "Hà Nội",
+        "district": "Quận Ba Đình",
+        "ward": "Phường Điện Biên"
+    },
+    {
+        "province": "Hà Nội",
+        "district": "Quận Hoàn Kiếm",
+        "ward": "Phường Hàng Trống"
+    },
+    {
+        "province": "Đà Nẵng",
+        "district": "Quận Hải Châu",
+        "ward": "Phường Phước Ninh"
+    },
+    {
+        "province": "Đà Nẵng",
+        "district": "Huyện Hòa Vang",
+        "ward": "Xã Hòa Ninh"
+    },
+    {
+        "province": "Thừa Thiên Huế",
+        "district": "Thành phố Huế",
+        "ward": "Phường Thuận Thành"
+    },
+    {
+        "province": "Quảng Ninh",
+        "district": "Thành phố Hạ Long",
+        "ward": "Phường Tuần Châu"
+    },
+    {
+        "province": "Hà Nội",
+        "district": "Quận Cầu Giấy",
+        "ward": "Phường Dịch Vọng"
+    },
+    {
+        "province": "Hà Nội",
+        "district": "Quận Tây Hồ",
+        "ward": "Phường Nhật Tân"
+    },
+    {
+        "province": "Đà Nẵng",
+        "district": "Quận Ngũ Hành Sơn",
+        "ward": "Phường Mỹ An"
+    },
+    {
+        "province": "Đà Nẵng",
+        "district": "Quận Sơn Trà",
+        "ward": "Phường Thọ Quang"
+    },
+    {
+        "province": "Thừa Thiên Huế",
+        "district": "Thành phố Huế",
+        "ward": "Phường Vĩnh Ninh"
+    },
+    {
+        "province": "Quảng Ninh",
+        "district": "Thành phố Cẩm Phả",
+        "ward": "Phường Cẩm Thành"
+    },
+    {
+        "province": "Hà Nội",
+        "district": "Quận Hai Bà Trưng",
+        "ward": "Phường Bạch Đằng"
+    },
+    {
+        "province": "Hồ Chí Minh",
+        "district": "Quận 7",
+        "ward": "Phường Tân Phong"
+    },
+    {
+        "province": "Hồ Chí Minh",
+        "district": "Quận 9",
+        "ward": "Phường Long Bình"
+    },
+    {
+        "province": "Hồ Chí Minh",
+        "district": "Quận 12",
+        "ward": "Phường Hiệp Thành"
+    },
+    {
+        "province": "Hồ Chí Minh",
+        "district": "Quận Thủ Đức",
+        "ward": "Phường Linh Trung"
+    },
+    {
+        "province": "Hồ Chí Minh",
+        "district": "Quận Tân Bình",
+        "ward": "Phường 15"
+    },
+    {
+        "province": "Hồ Chí Minh",
+        "district": "Quận Tân Phú",
+        "ward": "Phường Tân Sơn Nhì"
+    },
+    {
+        "province": "Hồ Chí Minh",
+        "district": "Quận Phú Nhuận",
+        "ward": "Phường 7"
+    },
+    {
+        "province": "Hồ Chí Minh",
+        "district": "Quận Bình Tân",
+        "ward": "Phường Bình Trị Đông"
+    },
+    {
+        "province": "Hồ Chí Minh",
+        "district": "Quận Thủ Đức",
+        "ward": "Phường Linh Chiểu"
+    },
+    {
+        "province": "Hồ Chí Minh",
+        "district": "Quận 1",
+        "ward": "Phường Cầu Kho"
+    },
+    {
+        "province": "Hồ Chí Minh",
+        "district": "Quận 2",
+        "ward": "Phường An Phú"
+    },
+    {
+        "province": "Hồ Chí Minh",
+        "district": "Quận 7",
+        "ward": "Phường Tân Kiểng"
+    },
+    {
+        "province": "Hồ Chí Minh",
+        "district": "Quận 9",
+        "ward": "Phường Long Phước"
+    },
+    {
+        "province": "Hồ Chí Minh",
+        "district": "Quận 12",
+        "ward": "Phường Tân Thới Hiệp"
+    },
+    {
+        "province": "Hồ Chí Minh",
+        "district": "Quận Thủ Đức",
+        "ward": "Phường Linh Xuân"
+    },
+    {
+        "province": "Hồ Chí Minh",
+        "district": "Quận Tân Bình",
+        "ward": "Phường 16"
+    },
+    {
+        "province": "Hồ Chí Minh",
+        "district": "Quận Tân Phú",
+        "ward": "Phường Tây Thạnh"
+    },
+    {
+        "province": "Hồ Chí Minh",
+        "district": "Quận Phú Nhuận",
+        "ward": "Phường 8"
+    },
+    {
+        "province": "Hồ Chí Minh",
+        "district": "Quận Bình Tân",
+        "ward": "Phường Bình Trị Đông A"
+    },
+    {
+        "province": "Hà Nội",
+        "district": "Quận Hai Bà Trưng",
+        "ward": "Phường Bách Khoa"
+    },
+    {
+        "province": "Hà Nội",
+        "district": "Quận Hoàng Mai",
+        "ward": "Phường Đại Kim"
+    },
+    {
+        "province": "Hà Nội",
+        "district": "Quận Thanh Xuân",
+        "ward": "Phường Hạ Đình"
+    },
+    {
+        "province": "Hà Nội",
+        "district": "Quận Long Biên",
+        "ward": "Phường Ngọc Lâm"
+    },
+    {
+        "province": "Hà Nội",
+        "district": "Quận Nam Từ Liêm",
+        "ward": "Phường Cầu Diễn"
+    },
+    {
+        "province": "Hà Nội",
+        "district": "Quận Bắc Từ Liêm",
+        "ward": "Phường Thượng Cát"
+    },
+    {
+        "province": "Hà Nội",
+        "district": "Quận Hà Đông",
+        "ward": "Phường Mộ Lao"
+    },
+    {
+        "province": "Hà Nội",
+        "district": "Quận Thanh Trì",
+        "ward": "Phường Vĩnh Quỳnh"
+    },
+    {
+        "province": "Hà Nội",
+        "district": "Quận Hoài Đức",
+        "ward": "Phường Đỗ Động"
+    },
+    {
+        "province": "Hà Nội",
+        "district": "Quận Thạch Thất",
+        "ward": "Phường Quốc Oai"
+    },
+    {
+        "province": "Hà Nội",
+        "district": "Quận Chương Mỹ",
+        "ward": "Phường Phúc Diễn"
+    },
+    {
+        "province": "Hà Nội",
+        "district": "Quận Ba Đình",
+        "ward": "Phường Ngọc Hà"
+    },
+    {
+        "province": "Hà Nội",
+        "district": "Quận Hoàn Kiếm",
+        "ward": "Phường Phan Chu Trinh"
+    },
+    {
+        "province": "Đà Nẵng",
+        "district": "Quận Hải Châu",
+        "ward": "Phường Thanh Bình"
+    },
+    {
+        "province": "Đà Nẵng",
+        "district": "Huyện Hòa Vang",
+        "ward": "Xã Hòa Phong"
+    },
+    {
+        "province": "Thừa Thiên Huế",
+        "district": "Thành phố Huế",
+        "ward": "Phường Phú Hậu"
+    },
+    {
+        "province": "Quảng Ninh",
+        "district": "Thành phố Hạ Long",
+        "ward": "Phường Bãi Cháy"
+    },
+    {
+        "province": "Hà Nội",
+        "district": "Quận Cầu Giấy",
+        "ward": "Phường Dịch Vọng Hậu"
+    },
+    {
+        "province": "Hà Nội",
+        "district": "Quận Tây Hồ",
+        "ward": "Phường Quảng An"
+    },
+    {
+        "province": "Đà Nẵng",
+        "district": "Quận Ngũ Hành Sơn",
         "ward": "Phường An Hải Bắc"
     },
     {
