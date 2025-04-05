@@ -1,5 +1,5 @@
-﻿CREATE DATABASE iWorld7;
-USE iWorld7;
+﻿CREATE DATABASE iWorld2;
+USE iWorld2;
 
 
 -- Bảng users (người dùng)
@@ -224,16 +224,16 @@ VALUES
 INSERT INTO product_versions (product_id, storage_capacity, ram_size, chip, color, total_quantity, quantity, sold_quantity, price)
 VALUES
 -- iPhone 15
-(1, '128GB', NULL, 'A16 Bionic', N'Đen', 20, 20, 0, 22990000),
+(1, '128GB', NULL, 'A16 Bionic', N'Đen', 20, 5, 15, 22990000),
 (1, '256GB', NULL, 'A16 Bionic', N'Trắng', 15, 15, 0, 24990000),
 (1, '512GB', NULL, 'A16 Bionic', N'Xanh', 10, 10, 0, 27990000),
 -- MacBook Pro 16 inch
-(2, '512GB', '16GB', 'M1 Pro', N'Bạc', 25, 25, 0, 65990000),
+(2, '512GB', '16GB', 'M1 Pro', N'Bạc', 25, 10, 15, 65990000),
 (2, '1TB', '16GB', 'M1 Pro', N'Xám', 15, 15, 0, 69990000),
 (2, '1TB', '32GB', 'M1 Pro', N'Bạc', 12, 12, 0, 74990000),
 (2, '2TB', '32GB', 'M1 Pro', N'Đen', 10, 10, 0, 79990000),
 -- AirPods 3
-(3, NULL, NULL, NULL, N'Trắng', 15, 15, 0, 3990000),
+(3, NULL, NULL, NULL, N'Trắng', 15, 5, 10, 3990000),
 -- iPad Air
 (4, '64GB', NULL, NULL, N'Xám', 15, 15, 0, 15990000),
 (4, '256GB', NULL, NULL, N'Bạc', 12, 12, 0, 17990000),

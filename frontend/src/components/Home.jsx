@@ -6,14 +6,32 @@ import axios from "axios";
 import "./styles/Home.css"; // Đảm bảo rằng tệp CSS đã được import
 
 const Home = () => {
-  const [products, setProducts] = useState([]);
+  const [topSellingProducts, setTopSellingProducts] = useState([]);
+  const [allProducts, setAllProducts] = useState([]);
 
+  // Lấy sản phẩm bán chạy nhất
+  useEffect(() => {
+    axios
+      .get("http://localhost:8080/api/products/topselling")
+      .then((response) => {
+        if (Array.isArray(response.data)) {
+          setTopSellingProducts(response.data);
+        } else {
+          console.error("Dữ liệu không hợp lệ", response.data);
+        }
+      })
+      .catch((error) => {
+        console.error("Có lỗi khi lấy dữ liệu:", error);
+      });
+  }, []);
+
+  // Lấy tất cả sản phẩm
   useEffect(() => {
     axios
       .get("http://localhost:8080/api/products/quanlysanpham")
       .then((response) => {
         if (Array.isArray(response.data)) {
-          setProducts(response.data);
+          setAllProducts(response.data);
         } else {
           console.error("Dữ liệu không hợp lệ", response.data);
         }
@@ -49,17 +67,50 @@ const Home = () => {
           />
         </Carousel.Item>
       </Carousel>
-      {/* Hiển thị sản phẩm */}
+
+      {/* Hiển thị sản phẩm bán chạy nhất */}
       <Container className="mt-5">
-        <h4 className="text-center mb-4">Sản Phẩm Mới Nhất</h4>
+        <h4 className="text-center mb-4">Sản Phẩm Bán Chạy Nhất</h4>
         <Row>
-          {products.map((product) => (
+          {topSellingProducts.map((product) => (
             <Col md={4} key={product.id}>
               <Card className="product-card shadow-sm">
                 <Link to={`/product/${product.id}`}>
                   <Card.Img
                     variant="top"
-                    src={`http://localhost:8080${product.productImages[0].imageUrl}`}
+                    src={`http://localhost:8080${product.productImages[0]?.imageUrl || "/default-image.jpg"}`}
+                    alt={product.name}
+                    className="card-img-top"
+                  />
+                  <Card.Body>
+                    <Card.Title className="product-name">{product.name}</Card.Title>
+                    <Card.Text className="product-price">
+                      {product.productVersions &&
+                      product.productVersions.length > 0 &&
+                      product.productVersions[0].price &&
+                      !isNaN(product.productVersions[0].price)
+                        ? product.productVersions[0].price.toLocaleString("vi-VN")
+                        : "N/A"}
+                    </Card.Text>
+                  </Card.Body>
+                </Link>
+              </Card>
+            </Col>
+          ))}
+        </Row>
+      </Container>
+
+      {/* Hiển thị tất cả sản phẩm */}
+      <Container className="mt-5">
+        <h4 className="text-center mb-4">Tất Cả Sản Phẩm</h4>
+        <Row>
+          {allProducts.map((product) => (
+            <Col md={4} key={product.id}>
+              <Card className="product-card shadow-sm">
+                <Link to={`/product/${product.id}`}>
+                  <Card.Img
+                    variant="top"
+                    src={`http://localhost:8080${product.productImages[0]?.imageUrl || "/default-image.jpg"}`}
                     alt={product.name}
                     className="card-img-top"
                   />

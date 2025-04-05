@@ -42,6 +42,16 @@ public class ProductController {
 
         return products;
     }
+    
+    @GetMapping("/topselling")
+    public List<ProductDTO> getTop3SellingProducts() {
+        List<ProductDTO> topSellingProducts = productService.getTop3SellingProducts();
+
+        // Cập nhật đường dẫn hình ảnh để có thể truy cập từ frontend
+        updateImageUrls(topSellingProducts);
+
+        return topSellingProducts;
+    }
 
     // Endpoint to get product by ID
     @GetMapping("/{id}")

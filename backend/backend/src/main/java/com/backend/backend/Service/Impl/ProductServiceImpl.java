@@ -75,6 +75,31 @@ public class ProductServiceImpl implements ProductService {
                 imagesToDelete); // Pass the imagesToDelete list
     }
 
+    @Override
+    public List<ProductDTO> getTop3SellingProducts() {
+        // Lấy tất cả sản phẩm từ cơ sở dữ liệu
+        List<Product> products = productRepository.findAll();
+
+        // Tính tổng soldQuantity cho từng sản phẩm
+        List<Product> sortedProducts = products.stream()
+                .sorted((p1, p2) -> {
+                    int totalSold1 = p1.getProductVersions().stream()
+                            .mapToInt(ProductVersion::getSoldQuantity)
+                            .sum();
+                    int totalSold2 = p2.getProductVersions().stream()
+                            .mapToInt(ProductVersion::getSoldQuantity)
+                            .sum();
+                    return Integer.compare(totalSold2, totalSold1); // Sắp xếp giảm dần
+                })
+                .limit(3) // Lấy 3 sản phẩm đầu tiên
+                .toList();
+
+        // Chuyển đổi từ Entity sang DTO
+        return sortedProducts.stream()
+                .map(this::convertToDTO)
+                .collect(Collectors.toList());
+    }
+
     // Get all products and return as DTO
     @Override
     public List<ProductDTO> getAllProducts() {

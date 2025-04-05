@@ -167,8 +167,10 @@ const QuanLySanPham = () => {
           {filteredProducts.length > 0 ? (
             filteredProducts.map((product) => (
               <Col key={product.id} md={4} className="mb-4">
-                <div className="product-details p-4 border rounded d-flex" 
-                style={{ backgroundColor: "#f8f9fa", height: "300px" }}>
+                <div
+                  className="product-details p-4 border rounded d-flex"
+                  style={{ backgroundColor: "#f8f9fa", height: "300px" }}
+                >
                   {/* Hình ảnh bên trái */}
                   <div className="product-image me-3">
                     {product.productImages?.length > 0 ? (
@@ -195,14 +197,16 @@ const QuanLySanPham = () => {
                         No Image
                       </div>
                     )}
-                    <h5 className="text-center mt-4"
-                    style={{ fontSize: "16px", fontWeight: "bold" }}
-                    >{product.name}</h5>
+                    <h5
+                      className="text-center mt-4"
+                      style={{ fontSize: "16px", fontWeight: "bold" }}
+                    >
+                      {product.name}
+                    </h5>
                   </div>
 
                   {/* Thông tin bên phải */}
                   <div className="product-info">
-                    
                     <p>
                       <strong>Danh Mục:</strong>{" "}
                       {product.category ? product.category.name : "N/A"}
@@ -252,15 +256,16 @@ const QuanLySanPham = () => {
                   <Button
                     variant="warning"
                     onClick={() => handleEditProduct(product)}
-                    className="me-2"
+                    className="me-2 custom-button"
                   >
-                    <FaPen />
+                    <FaPen className="icon" />
                   </Button>
                   <Button
                     variant="danger"
                     onClick={() => handleDeleteProduct(product.id)}
+                    className="custom-button"
                   >
-                    <FaTrashAlt />
+                    <FaTrashAlt className="icon" />
                   </Button>
                 </div>
               </Col>

@@ -28,7 +28,6 @@ public class Product {
     @JsonBackReference // Ngăn vòng lặp
     private Category category;
 
-
     private String description;
 
     private String brandName = "Apple";
@@ -40,8 +39,8 @@ public class Product {
     @OneToMany(mappedBy = "product")
     private List<ProductImage> productImages;
 
-    @OneToMany(mappedBy = "product", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<ProductVersion> productVersions;    
+    @OneToMany(mappedBy = "product", cascade = CascadeType.ALL)
+    private List<ProductVersion> productVersions;
 
     @OneToMany(mappedBy = "product")
     private List<Review> reviews;

@@ -18,4 +18,5 @@ public interface ProductService {
 
     void deleteProduct(Integer id);
 
+    List<ProductDTO> getTop3SellingProducts(); // Method to get top 3 selling products as DTOs
 }
