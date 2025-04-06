@@ -2,6 +2,8 @@ package com.backend.backend.DTO;
 
 import java.time.LocalDateTime;
 import java.util.List;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ProductDTO {
 
@@ -16,8 +18,22 @@ public class ProductDTO {
     private List<ProductVersionDTO> productVersions;
     private List<Integer> imagesToDelete; // Thay đổi thành List<Integer>
 
-    // Constructor phù hợp với các tham số truyền vào
-    public ProductDTO(Integer id, String name, CategoryDTO category, String description, String brandName, Integer status, LocalDateTime createdAt, List<ProductImageDTO> productImages, List<ProductVersionDTO> productVersions, List<Integer> imagesToDelete) {
+    // Constructor mặc định
+    public ProductDTO() {
+    }
+
+    @JsonCreator
+    public ProductDTO(
+            @JsonProperty("id") Integer id,
+            @JsonProperty("name") String name,
+            @JsonProperty("category") CategoryDTO category,
+            @JsonProperty("description") String description,
+            @JsonProperty("brandName") String brandName,
+            @JsonProperty("status") Integer status,
+            @JsonProperty("createdAt") LocalDateTime createdAt,
+            @JsonProperty("productImages") List<ProductImageDTO> productImages,
+            @JsonProperty("productVersions") List<ProductVersionDTO> productVersions,
+            @JsonProperty("imagesToDelete") List<Integer> imagesToDelete) {
         this.id = id;
         this.name = name;
         this.category = category;
@@ -27,7 +43,7 @@ public class ProductDTO {
         this.createdAt = createdAt;
         this.productImages = productImages;
         this.productVersions = productVersions;
-        this.imagesToDelete = imagesToDelete; // Khởi tạo trường này
+        this.imagesToDelete = imagesToDelete;
     }
 
      // Constructor với các tham số tối thiểu

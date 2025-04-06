@@ -87,3 +87,15 @@
   padding: 10px;
   border-radius: 5px;
 }
+
+.discount-logo {
+  position: absolute;
+  top: -10px; /* Khoảng cách từ trên xuống */
+  left: 230px; /* Khoảng cách từ trái sang */
+  z-index: 10; /* Đảm bảo logo nằm trên các phần tử khác */
+}
+
+.discount-logo img {
+  width: 150px; /* Kích thước logo */
+  height: auto;
+}

@@ -95,3 +95,50 @@
   .icon {
     font-size: 20px;
   }
+
+  .sesion{
+    border: 1px solid #ddd;
+    border-radius: 55px;
+    padding: 40px;
+    background-color: #fff;
+  }
+
+  .sesion h2{
+    color: crimson;
+    padding-left: 50px;
+    padding-right: 10px;
+    content: "Quản lý sản phẩm";
+  }
+
+  .title{
+    display: flex;
+    
+    justify-content: center;
+  }
+
+  .title>h4{
+    padding: 0px 10px;
+    position: relative;
+  }
+
+  .title>h4::before{
+    position: absolute;
+    content: '';
+    color: crimson;
+    top : 2px;
+    right: 10px;
+    width: 276px;
+    height: 1px;
+    border-bottom: 1px #C00 solid;
+    background-image: linear-gradient(to right, rgba(200,0,0,1), rgba(200,0,0,0));
+  }
+  .title>h4::after{
+    position: absolute;
+    content: '';
+    color: rgb(0, 0, 0);
+    top : 23px;
+    right: 10px;
+    width: 276px;
+    height: 7px;
+    border-bottom: 1px rgb(255, 0, 0) solid;
+  }

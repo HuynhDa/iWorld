@@ -70,34 +70,51 @@ const Home = () => {
 
       {/* Hiển thị sản phẩm bán chạy nhất */}
       <Container className="mt-5">
-        <h4 className="text-center mb-4">Sản Phẩm Bán Chạy Nhất</h4>
-        <Row>
-          {topSellingProducts.map((product) => (
-            <Col md={4} key={product.id}>
-              <Card className="product-card shadow-sm">
-                <Link to={`/product/${product.id}`}>
-                  <Card.Img
-                    variant="top"
-                    src={`http://localhost:8080${product.productImages[0]?.imageUrl || "/default-image.jpg"}`}
-                    alt={product.name}
-                    className="card-img-top"
-                  />
-                  <Card.Body>
-                    <Card.Title className="product-name">{product.name}</Card.Title>
-                    <Card.Text className="product-price">
-                      {product.productVersions &&
-                      product.productVersions.length > 0 &&
-                      product.productVersions[0].price &&
-                      !isNaN(product.productVersions[0].price)
-                        ? product.productVersions[0].price.toLocaleString("vi-VN")
-                        : "N/A"}
-                    </Card.Text>
-                  </Card.Body>
-                </Link>
-              </Card>
-            </Col>
-          ))}
-        </Row>
+        <div className="sesion  shadow-sm">
+          <div className="title">
+            <h4 className="mb-4 text">Sản Phẩm Bán Chạy Nhất</h4>
+          </div>
+          <Row>
+            {topSellingProducts.map((product) => (
+              <Col md={4} key={product.id}>
+                <Card className="product-card shadow-sm">
+                <div className="discount-logo">
+                    <img
+                      src="image/png-png-urbanbrush-1709-removebg-preview.png" // Đường dẫn đến logo giảm giá
+                      alt="Giảm giá"
+                    />
+                  </div>
+                  <Link to={`/product/${product.id}`}>
+                    <Card.Img
+                      variant="top"
+                      src={`http://localhost:8080${
+                        product.productImages[0]?.imageUrl ||
+                        "/default-image.jpg"
+                      }`}
+                      alt={product.name}
+                      className="card-img-top"
+                    />
+                    <Card.Body>
+                      <Card.Title className="product-name">
+                        {product.name}
+                      </Card.Title>
+                      <Card.Text className="product-price">
+                        {product.productVersions &&
+                        product.productVersions.length > 0 &&
+                        product.productVersions[0].price &&
+                        !isNaN(product.productVersions[0].price)
+                          ? product.productVersions[0].price.toLocaleString(
+                              "vi-VN"
+                            )
+                          : "N/A"}
+                      </Card.Text>
+                    </Card.Body>
+                  </Link>
+                </Card>
+              </Col>
+            ))}
+          </Row>
+        </div>
       </Container>
 
       {/* Hiển thị tất cả sản phẩm */}
@@ -110,18 +127,24 @@ const Home = () => {
                 <Link to={`/product/${product.id}`}>
                   <Card.Img
                     variant="top"
-                    src={`http://localhost:8080${product.productImages[0]?.imageUrl || "/default-image.jpg"}`}
+                    src={`http://localhost:8080${
+                      product.productImages[0]?.imageUrl || "/default-image.jpg"
+                    }`}
                     alt={product.name}
                     className="card-img-top"
                   />
                   <Card.Body>
-                    <Card.Title className="product-name">{product.name}</Card.Title>
+                    <Card.Title className="product-name">
+                      {product.name}
+                    </Card.Title>
                     <Card.Text className="product-price">
                       {product.productVersions &&
                       product.productVersions.length > 0 &&
                       product.productVersions[0].price &&
                       !isNaN(product.productVersions[0].price)
-                        ? product.productVersions[0].price.toLocaleString("vi-VN")
+                        ? product.productVersions[0].price.toLocaleString(
+                            "vi-VN"
+                          )
                         : "N/A"}
                     </Card.Text>
                   </Card.Body>
